@@ -28,6 +28,21 @@
         ```shell
         yarn add -D @babel/plugin-proposal-private-methods eslint-plugin-import eslint-import-resolver-babel-module @types/react @types/react-dom @types/node @types/jest typescript @types/react-redux 
         ```
+
+        Copy the template over to the project overriding existing files
+        ```shell
+        cp -r  ~/Projects/agave-azul/template  ~/Projects/agave-azul/example/rn_typescript
+        ```
+
+        Run the project
+        ```shell
+        npx react-native run-ios
+        ```
+
+        Reset the cache as needed
+        ```shell
+        yarn reset-cache
+        ```
     - Install hygen https://github.com/jondot/hygen
         ```shell
         yarn global add hygen
