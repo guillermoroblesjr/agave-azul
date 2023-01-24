@@ -33,6 +33,12 @@
         ```shell
         cp -r  ~/Projects/agave-azul/template  ~/Projects/agave-azul/example/rn_typescript
         ```
+        
+        Other way to copy files (hidden directories included)
+        https://superuser.com/questions/61611/how-to-copy-with-cp-to-include-hidden-files-and-hidden-directories-and-their-con
+        ```shell
+        cp -r /etc/skel/. /home/<new_user>
+        ```
 
         Run the project
         ```shell
