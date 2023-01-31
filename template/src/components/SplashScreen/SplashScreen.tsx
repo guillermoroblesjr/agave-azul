@@ -1,31 +1,20 @@
 import React, { memo } from 'react'
-import styled from 'styled-components/native'
+import Splash from '~/src/components/Splash'
+import { RootStackParamList, Screens } from '~/src/components/Navigation'
+import type { StackScreenProps } from '@react-navigation/stack'
 
-const Root = styled.View`  
-  background: #A30832;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-`
-const AppName = styled.Text`
-  color: #fff;
-  font-size: 100;
-`
+// Internal Components
+// ...
 
-interface PropsFromState {}
+// Props
+export type Props = StackScreenProps<RootStackParamList, Screens.Splash>
 
-interface Props {
-  name: String
-}
-
-type ComponentProps = Props & PropsFromState
-
-const SplashScreen: React.FC<ComponentProps> = memo(function SplashScreen({ name }) {
+// Memo'd Component
+const SplashScreen: React.FC<Props> = memo(function SplashScreen(props: Props) {
   return (
-    <Root>
-      <AppName>{name}</AppName>
-    </Root>
+    <Splash navigation={props.navigation} route={props.route} />
   )
 })
 
+// Default Export
 export default SplashScreen

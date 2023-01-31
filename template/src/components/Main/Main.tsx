@@ -1,22 +1,21 @@
-import { memo } from 'react';
-// import { Container as RootNavigator } from '~/src/components/RootNavigator'
-import { Component as SplashScreen } from '~/src/components/SplashScreen'
-import { name as appName } from '~/app.json'
+import React, { memo } from 'react';
+import Navigation from '~/src/components/Navigation'
 
 // This component should only include the components that come AFTER Redux
-// and BEFORE the RootNavigator.
+// and BEFORE the Navigation.
 
-interface PropsFromState {}
+// Internal Components
+// ...
 
-interface Props {}
+// Props
+export type Props = {}
 
-type ComponentProps = Props & PropsFromState
-
-const Main: React.FC<ComponentProps> = memo(function Main() {
+// Memo'd Component
+const Main: React.FC<Props> = memo(function Main() {
   return (
-    <SplashScreen name={appName} />
+    <Navigation />
   )
 })
 
+// Default Export
 export default Main
-
